@@ -984,6 +984,7 @@ rm -f %{name}-%{version}
 /etc/qubes/post-update.d/README
 %config(noreplace) /etc/profile.d/qt_x11_no_mitshm.sh
 %config(noreplace) /etc/profile.d/zqubes_disable_lesspipe.sh
+%config(noreplace) /etc/profile.d/zqubes_app_dispvm.sh
 %config(noreplace) /etc/sudoers.d/qt_x11_no_mitshm
 %config(noreplace) /etc/sudoers.d/umask
 %config(noreplace) /etc/sysctl.d/20_tcp_timestamps.conf
@@ -1294,6 +1295,7 @@ The Qubes core startup configuration for SystemD init.
 %_userunitdir/pipewire.service.d/40_minimal.conf
 %_userunitdir/wireplumber.service.d/30_qubes.conf
 /usr/lib/systemd/user-environment-generators/30-qubes.sh
+/usr/lib/systemd/user-environment-generators/99-qubes-app-dispvm.sh
 /usr/lib/qubes/setup-minimal-vm
 
 %post systemd
